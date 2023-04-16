@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta property="og:image" content="./stc-chat.zdn.vn/images/banner/zalo-thumb-link.png" />
+    <meta name="description" content="Đăng nhập Zalo Web để chat ngay trên máy tính. Zalo Web gửi hình, video cực nhanh lên đến 1GB, phân loại khách hàng, quản lý nhóm tiện lợi." />
+    <meta name="keywords" content="Đăng nhập Zalo, Dang nhap zalo, Đăng nhập zalo web, Zalo đăng nhập, zalo dang nhap, zalo web, chat zalo" />
+    <title>Zalo Web - Đăng nhập Zalo</title>
+    <link id="favico" rel="icon" type="image/png" href="/favicon-96x96.v1.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="inject_dashboard">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'convert')">Chuyển đổi</button>
+            <button class="tablinks" onclick="openCity(event, 'friend')">Bạn bè</button>
+            <button class="tablinks" onclick="openCity(event, 'group')">Nhóm</button>
+          </div>
+          
+          <div id="convert" class="tabcontent">
+            <button id="convert_button">Chuyển đổi</button>
+            <p>Chuyen doi is the capital city of England.</p>
+            <input id="zcid" placeholder="zcid" type="text">
+            <input id="zcid_ext" placeholder="zcid_ext" type="text">
+            <input id="encrypt_data" placeholder="encrypt_data" type="text">
+            <button id="decode_loginData">Decode</button>
+          </div>
+          
+          <div id="friend" class="tabcontent">
+            <h3>Ban be</h3>
+            <p>Ban be is the capital of France.</p>
+          </div>
+          
+          <div id="group" class="tabcontent">
+            <h3>Nhom</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        <script src="./inject_dashboard.js"></script>
+    </div>
+    <div class="notranslate default web active" style="display: none;">
+        <div id="app" style="display: none"></div>
+        <script src="./stc-sp.zadn.vn/session-sdk/session-sdk.min.js"></script>
+        <script src="libs/libsignal-protocol.static.js"></script>
+        <script>
+            window.__ZaBUNDLENAME__ =
+                'WEB';
+            window.__SRC_PREVIEW_THUMB_WORKER__ =
+                'preview-thumb-worker.129d87058129827939d4.js';
+            window.__SRC_SEARCH_WORKER__ = 'search-worker.129d87058129827939d4.js';
+            window.__SRC_SERVICE_WORKER__ = 'service-worker.129d87058129827939d4.js';
+            window.__SRC_CPU_HEAVY_WORKER__ = 'cpu-heavy-worker.129d87058129827939d4.js';
+            window.__SRC_SOC_WORKER__ = 'soc-worker.129d87058129827939d4.js';
+            window.__SRC_ZD_WORKER__ = 'zd-worker.129d87058129827939d4.js';
+            window.__SRC_PDF_WORKER__ = 'pdf-worker.129d87058129827939d4.js';
+            window.__SRC_MAINLESS_WORKER__ = 'mainless-worker.129d87058129827939d4.js';
+            window.__SRC_DAL_WORKER__ = 'dal-worker.129d87058129827939d4.js';
+            window.zconsole = window.console;
+
+            if (
+                typeof ZaloLoginWidget === 'object' &&
+                typeof ZaloLoginWidget.init === 'function'
+            ) {
+                ZaloLoginWidget.init({
+                    sessionName: 'zpw_sek',
+                    showName: true,
+                    onLoad: function(resp) {
+                        if (resp.error_code !== 0) {
+                            // handle error
+                            return;
+                        }
+                        if (resp.data.logged) {
+                            // logged in
+                            console.log('User logged');
+                        } else {
+                            console.log('User not login yet');
+                        }
+                    },
+                    onLogin: function(resp) {
+                        console.log('Login success: ', resp);
+                    },
+                });
+            }
+        </script>
+        <script async defer="defer" src="./apis.google.com/js/api.js"></script>
+        <script src="./zalo-chat-static.zadn.vn/v1/lazy/vendors-embed-render.8d93a9b09c98efc18c35.js"></script>
+        <script src="./zalo-chat-static.zadn.vn/v1/lazy/default-embed-render.ca32bd07816c17b942d5.js"></script>
+        <script src="./zalo-chat-static.zadn.vn/v1/render.129d87058129827939d4.js"></script>
+    </div>
+</body>
+</html>
